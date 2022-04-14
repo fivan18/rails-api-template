@@ -1,17 +1,23 @@
 class FibonacciController < ApplicationController
-	before_action :set_fibonacci_position, only: [:show]
-
 	def show
-		render json: { fibonacci_value: fibonacci_value(@fibonacci_position) }
+		begin
+			render json: { fibonacci_value: fibonacci_value(fibonacci_position) }
+		rescue ArgumentError, StandardError
+			render json: { message:
+				'Can\'t get fibonacci sequence from a negative integer or string' }, 
+				status: :unprocessable_entity
+		end
 	end
 
 	private
 
-	def set_fibonacci_position
-		@fibonacci_position = params[:id].to_i
+	def fibonacci_position
+		Integer(params[:id])
 	end
 
 	def fibonacci_value(n)
+		raise StandardError if n < 0
+
 		a = 0
 		b = 1
 		if n == 0

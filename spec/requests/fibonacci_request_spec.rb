@@ -14,7 +14,7 @@ RSpec.describe FibonacciController, type: :request do
       get '/fibonacci/-10'
       expect(response).to have_http_status(:unprocessable_entity)
       expect(JSON.parse(response.body).deep_symbolize_keys).to eq({
-        message: 'Can\'t get fibonacci sequence from a negative integer'
+        message: 'Can\'t get fibonacci sequence from a negative integer or string'
       })
     end
 
@@ -22,7 +22,7 @@ RSpec.describe FibonacciController, type: :request do
       get '/fibonacci/integer'
       expect(response).to have_http_status(:unprocessable_entity)
       expect(JSON.parse(response.body).deep_symbolize_keys).to eq({
-        message: 'Can\'t get fibonacci sequence from a no integer'
+        message: 'Can\'t get fibonacci sequence from a negative integer or string'
       })
     end
   end
