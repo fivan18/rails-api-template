@@ -23,11 +23,17 @@ Download the project
 
     $ git clone https://github.com/fivan18/rails-api-template.git
 
-Install the dependencies
+Go to the project's root directory and install the dependencies with the next command
 
     $ ./bin/bundle install
+    
+Run the migrations
+
+    $ ./bin/rails db:migrate
 
 ### Run the server
+
+Go to the project's root directory and run
 
     $ ./bin/rails s -p 8000
 
@@ -36,6 +42,8 @@ Install the dependencies
 You can get the fibonacci value for a given position the next way: [http://localhost:8000/fibonacci/10](http://localhost:8000/fibonacci/10).
 
 ### Run tests
+
+Go to the project's root directory and run
 
     $ ./bin/bundle exec rspec
 
