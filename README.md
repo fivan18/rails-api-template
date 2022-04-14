@@ -1,24 +1,59 @@
-# README
+# Fibonacci API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> An API made with [Ruby on Rails](https://rubyonrails.org/).
 
-Things you may want to cover:
+This project consisted on building a RESTFul API to calculate the fibonacci squence and return the value based on the position provided.
 
-* Ruby version
+## Built With
 
-* System dependencies
+- [Ruby on Rails](https://rubyonrails.org/)
 
-* Configuration
 
-* Database creation
+## Getting Started
 
-* Database initialization
+To get a local copy up and running follow these simple steps.
 
-* How to run the test suite
+### Prerequisites
 
-* Services (job queues, cache servers, search engines, etc.)
+Make sure you have installed [Ruby 2.7.5](https://www.ruby-lang.org/en/). [RVM](https://rvm.io/) manager could be useful to achieve this.
 
-* Deployment instructions
+### Setup
 
-* ...
+Download the project
+
+    $ git clone https://github.com/fivan18/rails-api-template.git
+
+Install the dependencies
+
+    $ ./bin/bundle install
+
+### Run the server
+
+    $ ./bin/rails s -p 8000
+
+### Usage
+
+You can get the fibonacci value for a given position the next way: [http://localhost:8000/fibonacci/10](http://localhost:8000/fibonacci/10).
+
+### Run tests
+
+    $ ./bin/bundle exec rspec
+
+## Authors
+
+👤 **Ivan Ulises Guzman Sanchez**
+
+- Github: [@fivan18](https://github.com/fivan18)
+- Twitter: [@fivanunam](https://twitter.com/fivanunam)
+- Linkedin: [fivan](https://www.linkedin.com/in/fivan)
+
+
+## Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/fivan18/rails-api-template/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
